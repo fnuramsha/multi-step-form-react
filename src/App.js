@@ -1,11 +1,11 @@
 import logo from "./logo.svg";
 import "./App.css";
-import UserDetails from "./Components/user-details/user-details.components";
+import MultiStepForm from "./Components/multi-step-form/multi-step-form";
 
 function App() {
   return (
     <>
-      <UserDetails />
+      <MultiStepForm />
     </>
   );
 }
