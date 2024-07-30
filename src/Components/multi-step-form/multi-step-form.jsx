@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../button/button.component";
 import FormInput from "../form-input/form-input.component";
 
 const defaultFormValues = {
@@ -65,7 +66,10 @@ const MultiStepForm = () => {
               name="email"
               value={email}
             />
-            <button onClick={nextStep}> Continue </button>
+            <Button buttonType="continue" onClick={nextStep}>
+              {" "}
+              Continue{" "}
+            </Button>
           </form>
         </div>
       )}
@@ -98,8 +102,13 @@ const MultiStepForm = () => {
               name="bio"
               value={bio}
             />
-            <button onClick={prevStep}>Back</button>
-            <button onClick={nextStep}> Continue </button>
+            <Button buttonType="back" onClick={prevStep}>
+              Back
+            </Button>
+            <Button buttonType="continue" onClick={nextStep}>
+              {" "}
+              Continue{" "}
+            </Button>
           </form>
         </div>
       )}
@@ -115,8 +124,13 @@ const MultiStepForm = () => {
           <p> Occupation: {occupation} </p>
           <p> City: {city} </p>
           <p> Bio: {bio} </p>
-          <button onClick={prevStep}>Back</button>
-          <button onClick={nextStep}> Submit </button>
+          <Button buttonType="back" onClick={prevStep}>
+            Back
+          </Button>
+          <Button buttonType="submit" onClick={nextStep}>
+            {" "}
+            Submit{" "}
+          </Button>
         </div>
       )}
       {/* `step 3 */}
